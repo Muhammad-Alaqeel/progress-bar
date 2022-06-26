@@ -1,0 +1,85 @@
+@import '/src/app/Styles/reusables';
+
+
+
+@keyframes loading{
+
+    0% {border-top-color: #24e444;
+    
+    }
+    25%{
+        border-right-color: #24e444;
+       
+    }
+    50%{
+        border-bottom-color: #24e444;
+        
+    }
+    75% {
+      
+        border-left-color: #24e444;
+        border-top-color:rgb(116, 104, 104);
+    }
+    100% {border-top-color: #24e444;
+    
+    }
+  
+
+}
+
+.container{
+ 
+    @include d-flex(center,row,center);
+  
+
+    .circle[data-descr]{
+        @include d-flex(center,column,center);
+      
+        position: relative;
+
+      
+        max-width: 30px;
+        max-height: 30px;
+        height: 4.5vw;
+        width: 4.5vw;
+        border-radius: 1000px;
+        border: 3.5px solid rgb(116, 104, 104);
+     
+        //&[data-descr]::after{
+      //      content: attr(data);
+        //    font-size: .9em;
+     //       position: absolute;
+      //      z-index: 2;
+      //      bottom: 0;
+            
+      //  }
+
+    span{
+        font-size: 1rem;
+        color: #fff;
+    }
+
+     .dot{
+         min-width: 8px;
+         min-height: 8px;
+         height: 1vw;
+         width: 1vw;
+         border-radius: 1000px;
+        background-color: rgb(116, 104, 104);
+     }
+
+     .content{
+
+        position: absolute;
+        bottom: 0;
+        height: .1px;  
+        font-size: 1rem;   }
+    
+    }
+
+    .line{
+        height: 3px;
+        width: 7vw;
+        background-color: #2FD249;
+    }
+}

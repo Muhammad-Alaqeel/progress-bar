@@ -1,0 +1,56 @@
+<div class="container">
+
+
+
+    <!--gray circle with a dot inside-->
+    <div *ngIf="state==0" (click)="clickedCircle()" id="ded" data-descr="stateName" class="circle">
+
+        <div class="dot"></div>
+
+        <div class="content">{{stateName}}</div>
+
+    </div> 
+
+
+    <!--in progrres-->
+    <div *ngIf="state==1" (click)="clickedCircle()"  data-descr="stateName" style="border-color: #2FD249;" class="circle">
+
+        <div class="dot"></div>
+        <div class="content">{{stateName}}</div>
+
+    </div> 
+
+    <!--completed-->
+    <div *ngIf="state==2" (click)="clickedCircle()" data-descr="stateName" style="background-color: #2FD249;border-color: #2FD249;" class="circle">
+
+        <svg width="42" height="41" viewBox="0 0 42 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.1084 22.2998L15.9005 29.0918L32.8806 12.1117" stroke="white" stroke-width="4.07524" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div class="content">{{stateName}}</div>
+
+            
+            
+    
+    </div> 
+    <div *ngIf="state==4" id="ded" (click)="clickedCircle()" data-descr="stateName" style=" animation: loading 1s linear infinite;" class="circle">
+        <div class="dot"></div>
+        <div class="content">{{stateName}}</div>
+
+    
+    </div> 
+     <!--line-->
+
+     <div class="line" *ngIf="(state==2)&&line"></div>
+     <!--gray line-->
+     <div class="line" style="background-color:  rgb(116, 104, 104);" *ngIf="(state < 2 || state == 4) && line"></div>
+            
+
+            
+
+
+
+  
+
+
+
+</div>
